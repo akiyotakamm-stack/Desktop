@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="keywords" content="bharath, Portfolio, Web Developer, React, Node.js, JavaScript, HTML, CSS, Freelance Developer">
+    <meta name="author" content="bharath">
     <title>my portfolio</title>
+    <!--open graph meta tags for social media sharing -->
+    <meta property="og:title" content="My Portfolio | bharath">
+    <meta property="og:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="your portfolio url">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Portfolio | Soumik">
+    <meta name="twitter:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="twitter:image" content="images/profile.jpg">
+    <!-- favicon-->
+    <link rel="icon" type="image/png" href="profile.jpg">
 </head>
 <body>
     <!--NAVIGATION-->
@@ -25,8 +41,10 @@
     <!-- about section-->
      <section id="about">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="my portfolio" width="200" height="200">
-        <p>I am a passionate web developer with experience in creating responsive and user-friendly websites.</p>
+        <figure>
+            <img src="profile.jpg" alt="my portfolio" width="200" height="200">
+            <figcaption>   I am a passionate web developer with experience in creating responsive and user-friendly websites. </figcaption>
+        </figure>
      </section>
      <!-- skills section-->
      <section id="skills">
@@ -44,10 +62,12 @@
         <div class="project-card">
             <h3>Project 1</h3>
             <p>a simple web application built with HTML.</p>
-            <a href="#" class="btn">View Project</a>
+            <a href="project.html" class="btn">View Project</a>
             <h3>Project 2</h3>
             <p>a simple web application built with CSS.</p>
             <a href="#" class="btn">View Project</a>
+            <!--youtube -->
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/tqjJrXd27m4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
             <h3>Project 3</h3>
             <p>a simple web application built with JavaScript.</p>
             <a href="#" class="btn">View Project</a>
