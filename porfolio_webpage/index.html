@@ -31,12 +31,12 @@
      <!-- skills section-->
      <section id="skills">
         <h2>Skills</h2>
-        <ol>
+        <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
             <li>React</li>
-        </ol>
+        </ul>
      </section>
      <!-- projects section-->
      <section id="project">
@@ -59,9 +59,16 @@
         <p>Email: <a href="mailto:bharathgowdac15@gmail.com">bharathgowdac15@gmail.com</a></p>
         <h2>Contact Me on GitHub</h2>
         <p>GitHub: <a href="https://github.com/akiyotakamm-stack" target="_blank">akiyotakamm-stack</a></p>
-        <h2>Contact Me on LinkedIn</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/bharath-gowda-1b0a4b1b6/" target="_blank">bharath Gowda C</a></p>
      </section>
+     <form action="/submit" method="POST">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        <button type="submit">Send Message</button>
+     </form>
      <!-- footer section-->
      <footer>
         <p>&copy; 2026 Bharath. All rights reserved.</p>
