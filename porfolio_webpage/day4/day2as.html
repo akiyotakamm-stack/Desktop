@@ -6,6 +6,107 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header >
+        <nav >
+            <div >BHARATH'S DAY-02 ASSIGNMENT </div>
+        </nav>
+     </header>
+    <h3>Skills Table</h3>
+    <table>
+    <thead>
+        <tr>
+            <th>Technology </th>
+            <th>Proficiency </th>
+            <th>Years of Experience</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>HTML</td>
+            <td>Advanced</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Advanced</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Intermediate</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td>Advanced</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td>Intermediate</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Express.js</td>
+            <td>Intermediate</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+
+    <br>
+
+    </table>
+    <h3>Registration Form</h3>
+    <form action="/submit" method="POST">
+    <!-- Text Input -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="bharath gowda" required>
+ 
+    <!-- Email Input -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="bharathgowda@example.com" required>
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8">
+ 
+    <!-- Radio Buttons (choose ONE) -->
+    <p>Experience Level:</p>
+    <input type="radio" id="beginner" name="level" value="beginner">
+    <label for="beginner">Beginner</label>
+    <input type="radio" id="intermediate" name="level" value="intermediate">
+    <label for="intermediate">Intermediate</label>
+ 
+    <!-- Checkboxes (choose MANY) -->
+    <p>Technologies:</p>
+    <input type="checkbox" id="html" name="tech" value="html">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="tech" value="css">
+    <label for="css">CSS</label>
+    <!-- Dropdown Select -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="">-- Choose Country --</option>
+        <option value="in">India</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+    </select>
+ 
+    <!-- Textarea (multi-line text) -->
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Type here..."></textarea>
+
+    <!-- File Upload -->
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc">
+ 
+    <!-- Date Input -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+ 
+    <!-- Submit Button -->
+    <button type="submit">Send Message</button>
+    <button type="reset">Clear Form</button>
+    </form>
+
 </body>
 </html>
