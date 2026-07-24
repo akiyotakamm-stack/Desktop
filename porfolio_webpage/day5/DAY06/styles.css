@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Bharath Gowda C — Portfolio Stylesheet
+   ========================================================================== */
+
+/* Universal reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Design tokens
+   -------------------------------------------------------------------------- */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #0048ff;
+  --color-primary: #05b0ff;   /* teal accent — links, highlights */
+  --color-secondary: #818cf8; /* indigo accent — secondary actions */
+  --color-text: #e6ebf5;
+  --color-text-muted: #94a3b8;
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Header / Navbar — Flexbox
+   -------------------------------------------------------------------------- */
+.site-header {
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.navbar .logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.theme-toggle,
+.menu-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Hero section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+  text-align: left;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero-section .highlight {
+  color: var(--color-primary);
+}
+
+.hero-section .tagline {
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+  max-width: 40ch;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   About section — element, class, ID, descendant selectors
+   -------------------------------------------------------------------------- */
+#about {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-content .profile-figure img {
+  border-radius: var(--radius);
+  border: 2px solid var(--color-secondary);
+}
+
+.about-content figcaption {
+  text-align: center;
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.about-text p {
+  color: var(--color-text-muted);
+  max-width: 55ch;
+}
+
+/* --------------------------------------------------------------------------
+   Skills section — CSS Grid, auto-fill
+   -------------------------------------------------------------------------- */
+.skill-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.skill-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-item {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  transition: border-color 0.2s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Projects section — CSS Grid, responsive (1 / 2 / 3 columns)
+   -------------------------------------------------------------------------- */
+.project-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.project-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 column */
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3,
+.project-card p,
+.project-card .project-tags,
+.project-card .btn {
+  margin: 0.75rem 1rem;
+}
+
+.project-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: rgba(94, 234, 212, 0.12);
+  color: var(--color-primary);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Contact section
+   -------------------------------------------------------------------------- */
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+#contact-form button {
+  border: none;
+  cursor: pointer;
+}
+
+.contact-section > p {
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile navigation (breakpoint < 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

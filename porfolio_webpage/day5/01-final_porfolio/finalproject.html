@@ -16,7 +16,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="My Portfolio | bharath">
-    <meta name="twitter:description" content="Fullsz4 stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="twitter:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
     <meta name="twitter:image" content="images/profile.jpg">
     <!-- favicon-->
     <link rel="icon" type="image/png" href="images.png">
@@ -88,6 +88,12 @@
         <!-- projects section-->
         <section id="projects" class="project-section">
             <h2>My Projects</h2>
+            <div class="project-filters">
+                <!-- the data filter attributes is what our js will read -->
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="web">Web Development</button>
+                <button class="filter-btn active" data-filter="mobile">Mobile Apps</button>
+            </div>
             <div class="project-grid">
                 <article class="project-card" data-category="web">
                     <img src="project.jpg" alt="Project 1 Screenshot" width="300">

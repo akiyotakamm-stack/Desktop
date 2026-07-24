@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Activity</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" id="userInput" placeholder="Type something..." />
+    <button type="submit" id="myButton">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const input = document.getElementById('userInput');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      const value = input.value;
+      console.log(value); // Print input value in console
+      alert('Button clicked! You entered: ' + value); // Show alert
+    });
+  </script>
+</body>
+</html>
